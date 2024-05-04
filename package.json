@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:sass": "sass public/styles/basic.scss public/css/styles.css && sass public/styles/layout.scss public/css/layout.css"
+    "build:sass": "sass public/styles/main.scss public/css/styles.css"
   },
   "dependencies": {
     "next": "14.2.3",
