@@ -1,0 +1,41 @@
+@import 'variables';
+
+/**** Main ****/
+
+main{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+    position: relative;
+
+    /**** Main Content ****/
+
+    .main_content{
+        flex: 1;
+        position: relative; // Add position relative to create a stacking context
+
+        &::before{
+            display: flex;
+            justify-content: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+        }
+        
+    }
+
+    /**** Personal Info ****/
+
+    .personal_info{
+        max-width: 30rem;
+        flex: 1;
+        position: sticky;
+    }
+
+}
+
+
+
+

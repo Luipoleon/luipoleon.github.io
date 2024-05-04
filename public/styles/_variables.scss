@@ -1,0 +1,115 @@
+/************ Variables **********/
+
+// Main colors
+
+$color-primary: #a2c537;
+$color-secondary: #616F39;
+$color-tertiary: #3E432E;
+$color-quaternary: #f9f9f9;
+$color-black: #000;
+
+
+// Colors shaders and tints
+
+$color-primary-shader: #f9f9f9;
+$color-primary-tint: #f9f9f9;
+
+
+
+// Grey tones
+
+$color-grey-dark: #333;
+$color-grey-light: #dedede;
+
+
+
+/************ Fonts **********/
+
+// Font colors
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+
+// Font sizes
+
+$font-size-xxs: 1.1rem;
+$font-size-xs: 1.4rem;
+$font-size-sm: 1.5rem;
+$font-size-md: 1.7rem;
+$font-size-lg: 1.9rem;
+$font-size-xl: 2.1rem;
+$font-size-xxl: 2.4rem;
+$font-size-xxxl: 3.2rem;
+
+
+// Font weights
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+
+// Line heights
+
+$line-height-xs: 1.2;
+$line-height-sm: 1.4;
+$line-height-md: 1.6;
+$line-height-lg: 1.8;
+$line-height-xl: 2.0;
+$line-height-xxl: 2.4;
+$line-height-xxxl: 3.2;
+
+
+// Letter spacing
+
+$letter-spacing-xs: 0.1rem;
+$letter-spacing-sm: 0.2rem;
+$letter-spacing-md: 0.3rem;
+$letter-spacing-lg: 0.4rem;
+$letter-spacing-xl: 0.5rem;
+$letter-spacing-xxl: 0.6rem;
+
+
+/************ Spacing **********/
+
+// Padding
+
+$padding-xs: 1rem;
+$padding-sm: 1.6rem;
+$padding-md: 2.4rem;
+$padding-lg: 3.2rem;
+$padding-xl: 4.0rem;
+
+
+// Margin
+
+$margin-xs: 0.8rem;
+$margin-sm: 1.6rem;
+$margin-md: 2.4rem;
+$margin-lg: 3.2rem;
+$margin-xl: 4.0rem;
+
+
+/************ Border **********/
+
+// Border radius
+
+$border-radius-xs: 0.2rem;
+$border-radius-sm: 0.8rem;
+$border-radius-md: 1.2rem;
+$border-radius-lg: 1.6rem;
+$border-radius-xl: 2.0rem;
+
+
+// Border width
+
+$border-width-xs: 0.1rem;
+$border-width-sm: 0.2rem;
+$border-width-md: 0.3rem;
+$border-width-lg: 0.4rem;
+$border-width-xl: 0.5rem;
+
+

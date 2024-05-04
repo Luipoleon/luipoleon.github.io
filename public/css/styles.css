@@ -1,0 +1,99 @@
+/************ Variables **********/
+/************ Fonts **********/
+/************ Spacing **********/
+/************ Border **********/
+/************ Variables **********/
+/************ Fonts **********/
+/************ Spacing **********/
+/************ Border **********/
+/** General Sytles **/
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/** Body **/
+body {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 1rem;
+}
+
+/** Main **/
+main {
+  box-shadow: 0.1rem 0.2rem 0.2rem rgba(97, 111, 57, 0.3);
+  height: calc(100vh - 2rem);
+  background-color: rgba(0, 0, 0, 0.9);
+  /** Main Content **/
+  /** Personal Info **/
+}
+main .main_content::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0.2rem 0.2rem 0;
+  opacity: 1;
+  backdrop-filter: blur(2rem);
+}
+main .personal_info {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+main .personal_info__header {
+  padding: 2.4rem;
+  text-align: center;
+  box-shadow: inset 0 -0.8rem 0.6rem -1rem #616F39;
+}
+main .personal_info__image {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+main .personal_info__image img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+main .personal_info__name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 2.4rem;
+}
+main .personal_info__job {
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+  color: #dedede;
+}
+
+/************ Variables **********/
+/************ Fonts **********/
+/************ Spacing **********/
+/************ Border **********/
+/**** Main ****/
+main {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  /**** Main Content ****/
+  /**** Personal Info ****/
+}
+main .main_content {
+  flex: 1;
+  position: relative;
+}
+main .main_content::before {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+main .personal_info {
+  max-width: 30rem;
+  flex: 1;
+  position: sticky;
+}
+
+/*# sourceMappingURL=styles.css.map */
