@@ -1,0 +1,29 @@
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Define styles for HTML elements
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+    color: $primary-color;
+    display: flex;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+// Add more styles as needed
