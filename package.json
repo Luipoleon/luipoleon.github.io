@@ -17,6 +17,7 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "sass": "^1.76.0"
+    "sass": "^1.76.0",
+    "typed.js": "^2.1.0"
   }
 }

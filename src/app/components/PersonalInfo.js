@@ -1,5 +1,9 @@
+
 import Image from 'next/image';
+import React from 'react';
 import profilePicture from '/public/images/profile.jpeg';
+import TypingEffect from './TypingEffect';
+
 
 const PersonalInfo = () => {
     return (
@@ -17,7 +21,8 @@ const PersonalInfo = () => {
                     </div>
                     <div>
                         <p className="personal_info__name">Luis Hernández</p>
-                        <p className="personal_info__job">Fullstack Developer</p>
+                        <p className="personal_info__job">Web Developer</p>
+                        {/* <TypingEffect/> */}
                     </div>
                 </div> 
             </div>
