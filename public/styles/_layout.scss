@@ -8,20 +8,40 @@ main{
     z-index: 1;
     text-align: center;
     position: relative;
-
+    overflow: hidden;
     /**** Main Content ****/
 
     .main_content{
         flex: 1;
         position: relative; // Add position relative to create a stacking context
-        // &::before{
-        //     display: flex;
-        //     justify-content: right;
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     z-index: -10;
-        // }
+        .hero_image{
+            position: relative;
+            width: 100%;
+            height: 50%;
+            &__background{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $background-image;
+                background-size: cover;
+                opacity: 0.1;
+                z-index: 1;
+            }
+
+            &__background_content{
+                position: absolute;
+                top: 4rem;
+                left: 4rem;
+                width: calc(100% - 8rem);
+                height: calc(100% - 8rem);
+                background: linear-gradient(to bottom, rgba($color-quaternary,0.2), rgba($color-quaternary,0.2)), $background-image;
+                background-size: cover;
+                opacity: 0.6;
+                z-index: 2;
+            }
+        }
         
     }
 
@@ -30,8 +50,59 @@ main{
     .personal_info{
         max-width: 30rem;
         flex: 1;
-        position: sticky;
         z-index: 2;
+        &__skills{
+            margin-top: $margin-md;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: $margin-xs;
+        }
+        &__languages_list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            margin-bottom: $margin-md;
+            span{
+                display: block;
+            }
+        }
+        &__programming_languages{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            row-gap: $margin-sm;
+            margin-top: $margin-sm;
+            .p_language{
+                span{
+                    display: block;
+                }
+            }
+        }
+
+        &__social{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 $padding-md;
+            .social_page{
+                display: inline-block;
+                font-size: $font-size-md;
+                color: $color-grey-light;
+                transition: color 0.3s;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+        }
+       
+    }
+
+    // NavBar
+
+    .navbar{
+        flex: 1;
+        max-width: 8rem;
     }
 
 }
