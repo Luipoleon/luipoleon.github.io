@@ -28,18 +28,32 @@ main {
     .main_content {
         background-color: $color-black-light;
         position: relative;
-        &__background{
-            background: $background-image;
-            background-size: cover;
-        }
+        .hero_image{
+            position: relative;
+            width: 100%;
+            height: 50%;
+            &__background{
+                background: $background-image;
+                background-size: cover;
+                opacity: 0.1;
+            }
 
-        &__background_content{
-            background: linear-gradient(to bottom, rgba($color-quaternary,0.2), rgba($color-quaternary,0.2)), $background-image;
-            background-size: cover;
-            opacity: 0.6;
-        }
+            &__content__title{
+                font-size: $font-size-sm;
+                font-weight: $font-weight-black;
+                margin-top: $margin-md;
+                color: $color-quaternary;
+                text-shadow: 0.1rem 0.2rem 0.4rem rgba(#111, 1);
+            }
 
-        
+            &__background_content::after{
+                content: "";
+                background: linear-gradient(to bottom, rgba($color-quaternary,0.1), rgba($color-quaternary,0.3)), $background-image;
+                background-size: cover;
+                opacity: 0.6;
+                z-index: 10;
+            }
+        }   
     }
 
     /** Personal Info **/
@@ -151,6 +165,27 @@ main {
    
     .divider{
         width: 100%;
+    }
+
+    // navbar
+    .navbar{
+        &__button{
+           color: $color-quaternary;
+           background-color: rgba($color-grey-dark, 0.2);
+        }
+        &__languages{
+            color: $color-quaternary;
+            font-size: $font-size-xxs;
+            div{
+                border-radius: 50%;
+                background-color: rgba($color-grey-dark, 0.2);
+               
+            }
+            .selected{
+                background-color: $color-tertiary;
+            }
+           
+        }
     }
 
 }
