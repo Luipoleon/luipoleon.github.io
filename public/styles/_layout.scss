@@ -1,23 +1,114 @@
 @import 'variables';
 
+/** General Sytles **/
+
+.container {
+    width: 100%;
+}
+
+body{
+    padding: $padding-xs;
+}
+
+/**** Personal Info ****/
+
+.personal_info{
+    width: 30rem;
+    height: calc(100vh - $padding-xs * 2);
+    flex: 1;
+    z-index: 2;
+    position: absolute;
+    &__skills{
+        margin-top: $margin-md;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $margin-xs;
+    }
+    &__languages_list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-bottom: $margin-md;
+      
+        .language{
+            margin: 0 auto;
+            &__icon{
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+       
+        }
+        span{
+            display: block;
+        }
+    }
+    &__programming_languages{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        row-gap: $margin-sm;
+        margin-top: $margin-sm;
+        .p_language{
+            span{
+                display: block;
+            }
+        }
+    }
+
+    &__social{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 $padding-md;
+        .social_page{
+            display: inline-block;
+            font-size: $font-size-md;
+            color: $color-grey-light;
+            transition: color 0.3s;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+
+    .divider{
+        width: 100%;
+    }
+   
+}
+
 /**** Main ****/
 
 main{
     display: flex;
     justify-content: center;
+    position: absolute;
     z-index: 1;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    width: calc(100% - 38rem - $padding-xs *2);
+    height: calc(100vh - $padding-xs * 2);
+    top: $padding-xs;
+    left: 30rem + $padding-xs;
+  
     /**** Main Content ****/
 
     .main_content{
         flex: 1;
         position: relative; // Add position relative to create a stacking context
+        
         .hero_image{
             position: relative;
             width: 100%;
             height: 50%;
+
+            &__content__title{
+                margin-top: $margin-md;
+            }
+
             &__background{
                 position: absolute;
                 top: 0;
@@ -44,85 +135,42 @@ main{
         
     }
 
-    /**** Personal Info ****/
+}
 
-    .personal_info{
-        max-width: 30rem;
-        flex: 1;
-        z-index: 2;
-        &__skills{
-            margin-top: $margin-md;
+
+// NavBar
+
+.navbar{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: $padding-xs;
+    margin: $padding-xs 0;
+    width: 8rem;
+    height: calc(100% - 2 * $padding-xs);
+    &__button{
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+    &__languages{
+        text-align: center;
+        div{
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: $margin-xs;
-        }
-        &__languages_list{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            width: 100%;
-            margin-bottom: $margin-md;
-            span{
-                display: block;
-            }
-        }
-        &__programming_languages{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            width: 100%;
-            row-gap: $margin-sm;
-            margin-top: $margin-sm;
-            .p_language{
-                span{
-                    display: block;
-                }
-            }
-        }
-
-        &__social{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 0 $padding-md;
-            .social_page{
-                display: inline-block;
-                font-size: $font-size-md;
-                color: $color-grey-light;
-                transition: color 0.3s;
-                &:hover{
-                    color: $color-primary;
-                }
-            }
+            align-items: center;
+            margin: 2rem auto;
+            width: 3rem;
+            height: 3rem;
         }
        
     }
-
-    // NavBar
-
-    .navbar{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 8rem;
-        &__button{
-            padding: 2rem;
-        }
-        &__languages{
-            text-align: center;
-            div{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 2rem auto;
-                width: 3rem;
-                height: 3rem;
-            }
-           
-        }
-    }
-
 }
+
 
 
 
