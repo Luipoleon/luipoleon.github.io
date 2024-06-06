@@ -21,8 +21,27 @@ body{
 a:link{
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
 }
 
 a:link, a:visited{
   color: inherit;
+}
+
+button{
+  cursor: pointer;
+  /* Clear button styles */
+
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  outline: inherit;
+
 }

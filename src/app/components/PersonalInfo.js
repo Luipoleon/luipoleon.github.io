@@ -21,6 +21,7 @@ const PersonalInfo = () => {
                             alt="Profile" 
                             width={130} height={130}
                             quality={100}
+                            priority={true}
                         />
                         
                     </div>

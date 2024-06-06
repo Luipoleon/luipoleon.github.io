@@ -12,15 +12,15 @@ body {
 .personal_info {
     background: radial-gradient(
       circle,
-      rgba($color-black, 0.9) 0%,
-      rgba($color-black, 0.8) 100%
+      rgba($color-black, 0.95) 0%,
+      rgba($color-black, 1) 100%
     );
     border-radius:  $border-radius-xs 0 0 $border-radius-xs;
     box-shadow: 0.1rem 0.2rem 0.4rem rgba(#020202, 1);
+    overflow: hidden;
     // Header
   
     &__header {
-      padding: $padding-sm;
       border-radius:  $border-radius-sm 0 0 $border-radius-sm;
       border-radius:  $border-radius-sm 0 0 ;
       text-align: center;
@@ -28,11 +28,8 @@ body {
       background-color: rgba($color-grey, 0.8);
     }
     &__image {
-      margin-top: $margin-lg;
       text-align: center;
       img {
-        height: 10rem;
-        width: 10rem;
         border-radius: 50%;
       }
     }
@@ -40,19 +37,16 @@ body {
     &__name {
       font-size: $font-size-sm;
       font-weight: $font-weight-black;
-      margin-top: $margin-md;
     }
   
     &__job {
       font-size: $font-size-xxs;
-      margin-top: $margin-xs;
       color: $color-grey-light;
     }
   
     // Body
   
     &__body {
-      padding: $padding-md;
       text-align: center;
       font-size: $font-size-xs;
       line-height: $line-height-md;
@@ -112,9 +106,28 @@ body {
 main {
   box-shadow: 0.1rem 0.1rem 0.1rem rgba(#111, 1);
   background-color: $color-black;
+  transition: all $transition-time;
+  
+   // Modifiers
+  &::before {
+    transition: background-color 1s; // Adjust the duration as needed
+    background-color: rgba($color-quaternary, 0.1);
+    opacity: 0;
+  }
+
+  &.navbar--open{
+    transition: all 2s;
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+
   /** Main Content **/
   .main_content {
     background-color: $color-black-light;
+    overflow: hidden;
+
     .hero_image {
       &__background {
         background: $background-image;
@@ -150,10 +163,19 @@ main {
   background-color: $color-black;
   border-radius: 0 $border-radius-xs $border-radius-xs 0;
   box-shadow: -0.1rem 0.2rem 0.4rem rgba(#090809, 0.8);
+  overflow: hidden;
+  transition: all $transition-time;
   &__button {
     color: $color-quaternary;
     background-color: rgba($color-grey-dark, 0.2);
     border-radius: 0 $border-radius-xs $border-radius-xs 0;
+   
+    button{
+      transition: all $transition-time;
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
   }
   &__languages {
     color: $color-quaternary;
@@ -161,10 +183,54 @@ main {
     div {
       border-radius: 50%;
       background-color: rgba($color-grey-dark, 0.2);
-
-    }
-    .selected {
-      background-color: $color-tertiary;
+      cursor: pointer;
+      &.selected {
+        background-color: $color-tertiary;
+        &:hover {
+          background-color: rgba($color-tertiary, 0.7);
+        }
+      }
+      &:hover {
+        background-color: rgba($color-quaternary, 0.1);
+      }
     }
   }
+
+
+
+   // Modifiers
+    &--open{
+        .navbar{
+            &__content--closed{
+                opacity: 0;
+            }
+            &__content--open{
+              .navbar__button{
+                font-size: $font-size-xl;
+              }
+
+              .navbar__menu{
+                font-size: $font-size-xs;
+                .navbar__menu__item{
+                  transition: all $transition-time;
+                  &:hover{
+                    transform: scale(1.05);
+                  }
+                  &.selected{
+                    text-shadow: 0.025rem 0.05rem 0.1rem rgba(#ffffff3a, 0.6);
+                    font-weight: $font-weight-medium;
+                  }
+                }
+              }
+            }
+        }
+    }
+
+    &--closed{
+        .navbar{
+            &__content--open{
+                opacity: 0;
+            }
+        }
+    }
 }
