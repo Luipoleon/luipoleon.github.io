@@ -17,7 +17,9 @@ body {
     );
     border-radius:  $border-radius-xs 0 0 $border-radius-xs;
     box-shadow: 0.1rem 0.2rem 0.4rem rgba(#020202, 1);
-    overflow: hidden;
+    transition: all $transition-time;
+    overflow-y: auto;
+    
     // Header
   
     &__header {
@@ -110,23 +112,31 @@ main {
   
    // Modifiers
   &::before {
-    transition: background-color 1s; // Adjust the duration as needed
+    transition: all $transition-time; // Adjust the duration as needed
     background-color: rgba($color-quaternary, 0.1);
     opacity: 0;
   }
 
   &.navbar--open{
-    transition: all 2s;
+    transition: all $transition-time;
     
     &::before {
-      opacity: 1;
+      animation: fadeIn $transition-time forwards ease-in;
     }
   }
+  &.navbar--closed{
+    transition: all $transition-time;
+    
+    &::before {
+      animation: fadeIn $transition-time reverse forwards ease-in;
+    }
+  }
+  
 
   /** Main Content **/
   .main_content {
     background-color: $color-black-light;
-    overflow: hidden;
+    overflow-y: auto;
 
     .hero_image {
       &__background {
