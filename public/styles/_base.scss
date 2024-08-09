@@ -18,17 +18,16 @@ body {
     border-radius:  $border-radius-xs 0 0 $border-radius-xs;
     box-shadow: 0.1rem 0.2rem 0.4rem rgba(#020202, 1);
     transition: all $transition-time;
-    overflow-y: auto;
     
     // Header
   
     &__header {
-      border-radius:  $border-radius-sm 0 0 $border-radius-sm;
       border-radius:  $border-radius-sm 0 0 ;
       text-align: center;
       box-shadow: inset 0 -0.8rem 0.6rem -1rem rgba($color-quaternary, 0.6);
       background-color: rgba($color-grey, 0.8);
     }
+    
     &__image {
       text-align: center;
       img {
@@ -53,6 +52,7 @@ body {
       font-size: $font-size-xs;
       line-height: $line-height-md;
       font-style: italic;
+      overflow-y: auto;
     }
   
     // Skills
@@ -96,10 +96,12 @@ body {
       .social_page {
         font-size: $font-size-md;
         color: $color-grey-light;
+        margin: 0;
         transition: color 0.3s;
         &:hover {
           color: $color-primary;
         }
+        height: 100%;
       }
     }
   }

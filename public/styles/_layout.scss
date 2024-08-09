@@ -12,6 +12,7 @@ body{
 
 /**** Personal Info ****/
 
+
 .personal_info{
     width: 30rem;
     height: calc(100vh - $padding-xs * 2);
@@ -21,6 +22,7 @@ body{
 
     &__header{
         padding: $padding-sm;
+        height: 23rem;
     }
 
     &__image{
@@ -41,8 +43,10 @@ body{
 
     &__body{
         padding: $padding-md;
+        height: calc(100vh - $padding-xs * 2 - 25rem);
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     &__skills{
@@ -50,14 +54,13 @@ body{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: $margin-xs;
+        gap: $margin-sm;
     }
     &__languages_list{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        margin-bottom: $margin-md;
-        flex: 1;
+        margin-bottom: $margin-sm;
       
         .language{
             margin: 0 auto;
@@ -78,7 +81,7 @@ body{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-        height: 23.5rem;
+        height: 22rem;
         row-gap: $margin-sm;
         margin-top: $margin-sm;
         flex: 2;
@@ -184,7 +187,19 @@ main{
 
 }
 
-
+@media screen and (max-width: 768px){
+    .personal_info{
+        display: none;
+    }
+    main{
+        width: 100%;
+        left: 0;
+        &.navbar--open{
+            left: 0;
+            width: 100%;
+        }
+    }  
+}
 
 // NavBar
 
@@ -276,6 +291,11 @@ main{
 
 }
 
-
+@media screen and (max-width: 768px){
+    .navbar{
+        display: none;
+    }
+    
+}
 
 
