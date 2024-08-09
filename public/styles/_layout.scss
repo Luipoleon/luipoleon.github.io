@@ -19,10 +19,10 @@ body{
     display: flex;
     z-index: 2;
     position: absolute;
-
+    
     &__header{
         padding: $padding-sm;
-        height: 23rem;
+        height: 22rem;
     }
 
     &__image{
@@ -47,6 +47,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        min-height: 45rem; 
     }
 
     &__skills{
