@@ -3,7 +3,7 @@
 /** Body **/
 
 body {
-  background-color: rgba($color-grey-dark, 0.9);
+  background-color: $background-color;
   color: #fff;
 }
 
@@ -194,10 +194,10 @@ main {
     font-size: $font-size-xxs;
     div {
       border-radius: 50%;
-      background-color: rgba($color-grey-dark, 0.2);
+      background-color: rgba($color-secondary, 0.2);
       cursor: pointer;
       &.selected {
-        background-color: $color-tertiary;
+        background-color: $color-primary;
         &:hover {
           background-color: rgba($color-tertiary, 0.7);
         }

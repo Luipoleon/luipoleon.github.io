@@ -2,13 +2,14 @@
 
 // Main colors
 
-$color-primary: #228be6;
-$color-secondary: #0b7285;
-$color-tertiary: #3E432E;
-$color-quaternary: #f9f9f9;
-$color-black: #000;
-$color-grey: #111;
+$color-primary: #7D9D9C;
+$color-secondary: #576F72;
+$color-tertiary: #E4DCCF;
+$color-quaternary: #F0EBE3;
+$color-black: #333;
+$color-grey: #444;
 
+$background-color: #F0EBE3;
 
 // Colors shaders and tints
 
@@ -18,7 +19,7 @@ $color-primary-tint: #f9f9f9;
 
 
 // Grey tones
-$color-black-light: #0A0A0A;
+$color-black-light: #222;
 $color-grey-dark: #333;
 $color-grey-light: #dedede;
 
@@ -116,7 +117,7 @@ $border-width-xl: 0.5rem;
 
 // Bacground image 
 
-$background-image: url('../images/bg3.jpg');
+$background-image: url('../images/background.jpg');
 
 
 
